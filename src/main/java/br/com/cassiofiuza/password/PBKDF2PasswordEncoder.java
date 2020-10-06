@@ -12,7 +12,7 @@ import javax.enterprise.context.ApplicationScoped;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 @ApplicationScoped
-public class PasswordEncoder {
+public class PBKDF2PasswordEncoder {
   private static final short INTERATION_INDEX = 0;
   private static final short SALT_INDEX = 1;
   private static final short PBKDF2_INDEX = 2;
@@ -21,7 +21,7 @@ public class PasswordEncoder {
   private Integer iteration;
   private Integer keyLength;
 
-  public PasswordEncoder(
+  public PBKDF2PasswordEncoder(
       @ConfigProperty(name = "br.com.cassiofiuza.password.iteration") Integer iteration,
       @ConfigProperty(name = "br.com.password.key-length") Integer keyLength) {
     this.iteration = iteration;
