@@ -19,6 +19,7 @@ import javax.enterprise.context.ApplicationScoped;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
+import br.com.cassiofiuza.authentication.Role;
 import io.smallrye.jwt.build.Jwt;
 
 @ApplicationScoped

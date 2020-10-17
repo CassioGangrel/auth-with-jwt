@@ -1,4 +1,4 @@
-package br.com.cassiofiuza.token;
+package br.com.cassiofiuza.authentication;
 
 public enum Role {
   ADMIN, CLIENT, USER;

@@ -34,3 +34,6 @@ pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
 release.properties
+src/main/resources/META-INF/keys/publickey.pem
+src/main/resources/META-INF/keys/privatekey.pem
+csr.pem

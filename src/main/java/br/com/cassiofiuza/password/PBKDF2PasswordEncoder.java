@@ -34,8 +34,7 @@ public class PBKDF2PasswordEncoder {
       byte[] salt = new byte[16];
       random.nextBytes(salt);
 
-      byte[] hash;
-      hash = this.pbkdf2(password.toCharArray(), salt, iteration, keyLength);
+      byte[] hash = this.pbkdf2(password.toCharArray(), salt, iteration, keyLength);
       
       return String.format("%d:%s:%s", iteration, this.toHex(salt), toHex(hash));
     } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
