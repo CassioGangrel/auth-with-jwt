@@ -27,3 +27,9 @@ Ou, se você nao tem a GraalVM instalada, você pode rodar o build para nativo e
 Então pode executar usando o comando: `./target/auth-with-jwt-1.0.0-SNAPSHOT-runner`
 
 Para mais informações, favor consultar https://quarkus.io/guides/building-native-image.
+
+## Criando as chaves no linux
+
+1 - openssl req -newkey rsa:2048 -new -nodes -keyout privatekey.pem -out csr.pem
+
+2 - openssl rsa -in privatekey.pem -pubout > publickey.pem
